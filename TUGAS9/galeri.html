@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri — Pojok Kali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coffee: "#482718",
+              river: "#40B6D4",
+              riverdeep: "#2E93AC",
+              cream: "#F7F3EE",
+              dark: "#2F2F2F",
+            },
+            fontFamily: {
+              display: ['"Cormorant Garamond"', "serif"],
+              body: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="font-body bg-cream text-dark antialiased">
+    <header
+      class="sticky top-0 z-40 bg-cream/95 backdrop-blur border-b border-coffee/10"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-2">
+          <img src="images/logo.png" alt="Logo Pojok Kali" class="logo" />
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm text-dark/80">
+          <a href="#" class="nav-link">Beranda</a>
+          <a href="#" class="nav-link">Tentang Kami</a>
+          <a href="#" class="nav-link">Menu</a>
+          <a href="#" class="nav-link active">Galeri</a>
+          <a href="#" class="nav-link">Kontak</a>
+        </nav>
+
+        <a href="#" class="hidden md:inline-block btn-primary text-sm"
+          >Pesan Sekarang</a
+        >
+        <button
+          id="menuBtn"
+          class="md:hidden text-coffee"
+          aria-label="Buka menu navigasi"
+          aria-expanded="false"
+        ></button>
+      </div>
+      <nav
+        id="mobileNav"
+        class="hidden md:hidden flex-col px-6 pb-5 gap-3 text-sm text-dark/80"
+      >
+        <a href="#" class="nav-link py-1">Beranda</a>
+        <a href="#" class="nav-link py-1">Tentang Kami</a>
+        <a href="#" class="nav-link py-1">Menu</a>
+        <a href="#" class="nav-link active py-1">Galeri</a>
+        <a href="#" class="nav-link py-1">Kontak</a>
+        <a href="#" class="btn-primary text-center mt-2">Pesan Sekarang</a>
+      </nav>
+    </header>
+    <section class="max-w-7xl mx-auto px-6 md:px-10 pt-14 pb-8 text-center">
+      <p
+        class="uppercase tracking-[0.25em] text-xs text-river-deep font-medium mb-3"
+      >
+        Dokumentasi Suasana
+      </p>
+      <h1 class="font-display text-4xl md:text-5xl font-semibold text-coffee">
+        Galeri Pojok Kali
+      </h1>
+      <p class="max-w-xl mx-auto text-dark/70 text-sm md:text-base">
+        Sekilas suasana, secangkir cerita — potret tempat, minuman, makanan, dan
+        momen keseharian di Pojok Kali.
+      </p>
+    </section>
+    <section class="max-w-7xl mx-auto px-6 md:px-10">
+      <div
+        class="flex items-center justify-center gap-3 overflow-x-auto pb-2 no-scrollbar"
+        role="tablist"
+        aria-label="Filter kategori galeri"
+      >
+        <button
+          class="filter-pill active"
+          data-filter="semua"
+          role="tab"
+          aria-selected="true"
+        >
+          Semua
+        </button>
+        <button
+          class="filter-pill"
+          data-filter="tempat"
+          role="tab"
+          aria-selected="false"
+        >
+          Tempat
+        </button>
+        <button
+          class="filter-pill"
+          data-filter="minuman"
+          role="tab"
+          aria-selected="false"
+        >
+          Minuman
+        </button>
+        <button
+          class="filter-pill"
+          data-filter="makanan"
+          role="tab"
+          aria-selected="false"
+        >
+          Makanan
+        </button>
+        <button
+          class="filter-pill"
+          data-filter="kegiatan"
+          role="tab"
+          aria-selected="false"
+        >
+          Kegiatan
+        </button>
+      </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-6 md:px-10 py-10">
+      <div
+        id="galleryGrid"
+        class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 auto-rows-[180px] md:auto-rows-[220px]"
+      >
+        <div class="gallery-card row-span-2 col-span-1" data-category="tempat">
+          <img
+            src="images/tempat-duduk.jpg"
+            alt="Area duduk outdoor Pojok Kali di tepi kali"
+            loading="lazy"
+          />
+          <div class="gallery-caption">
+            <span class="gallery-tag font-body">Tempat</span>
+            <p class="font-display text-lg leading-none">Teras Tepi Kali</p>
+          </div>
+        </div>
+
+        <div class="gallery-card col-span-1" data-category="minuman">
+          <img
+            src="images/iced-coffee.png"
+            alt="Es kopi susu Pojok Kali dengan pemandangan kali"
+            loading="lazy"
+          />
+          <div class="gallery-caption">
+            <span class="gallery-tag font-body">Minuman</span>
+            <p class="font-display text-lg leading-none">Kopi Susu Kali</p>
+          </div>
+        </div>
+
+        <div class="gallery-card col-span-1" data-category="kegiatan">
+          <img
+            src="images/apron.png"
+            alt="Seragam dan apron staf Pojok Kali"
+            loading="lazy"
+          />
+          <div class="gallery-caption">
+            <span class="gallery-tag font-body">Kegiatan</span>
+            <p class="font-display text-lg leading-none">Seragam Barista</p>
+          </div>
+        </div>
+
+        <div class="gallery-card col-span-1" data-category="makanan">
+          <img
+            src="images/manual-brew.jpg"
+            alt="Manual brew kopi Pojok Kali"
+            loading="lazy"
+          />
+          <div class="gallery-caption">
+            <span class="gallery-tag font-body">Minuman</span>
+            <p class="font-display text-lg leading-none">Manual Brew</p>
+          </div>
+        </div>
+
+        <div
+          class="gallery-card col-span-1 md:col-span-2"
+          data-category="tempat"
+        >
+          <img
+            src="images/signage.png"
+            alt="Papan nama Pojok Kali di depan kedai"
+            loading="lazy"
+          />
+          <div class="gallery-caption">
+            <span class="gallery-tag font-body">Tempat</span>
+            <p class="font-display text-lg leading-none">Papan Nama Kedai</p>
+          </div>
+        </div>
+
+        <div class="gallery-card col-span-1" data-category="minuman">
+          <img
+            src="images/logo.png"
+            alt="Logo Pojok Kali"
+            loading="lazy"
+            style="object-fit: contain; background-color: #fff"
+          />
+          <div class="gallery-caption">
+            <span class="gallery-tag font-body">Kegiatan</span>
+            <p class="font-display text-lg leading-none">Identitas Brand</p>
+          </div>
+        </div>
+      </div>
+      <p id="emptyState" class="hidden text-center text-dark/50 text-sm mt-8">
+        Belum ada dokumentasi untuk kategori ini. Coba pilih kategori lain.
+      </p>
+
+      <div class="text-center mt-10">
+        <a href="#" class="btn-outline text-sm">Lihat Semua Galeri</a>
+      </div>
+    </section>
+    <footer class="bg-coffee text-cream/80 mt-6">
+      <div
+        class="max-w-7xl mx-auto px-6 md:px-10 py-6 flex flex-col md:flex-row items-center justify-center gap-3 text-xs md:text-sm text-center md:text-left"
+      >
+        <p>&copy; 2026 Harist Abdul Aziz.</p>
+      </div>
+    </footer>
+    <script>
+      // Mobile nav toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileNav = document.getElementById("mobileNav");
+      menuBtn.addEventListener("click", () => {
+        const isOpen = mobileNav.classList.toggle("flex");
+        mobileNav.classList.toggle("hidden");
+        menuBtn.setAttribute("aria-expanded", isOpen);
+      });
+
+      // Gallery filter
+      const pills = document.querySelectorAll(".filter-pill");
+      const cards = document.querySelectorAll(".gallery-card");
+      const emptyState = document.getElementById("emptyState");
+
+      pills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          pills.forEach((p) => {
+            p.classList.remove("active");
+            p.setAttribute("aria-selected", "false");
+          });
+          pill.classList.add("active");
+          pill.setAttribute("aria-selected", "true");
+
+          const filter = pill.dataset.filter;
+          let visibleCount = 0;
+
+          cards.forEach((card) => {
+            const match =
+              filter === "semua" || card.dataset.category === filter;
+            card.classList.toggle("hidden-item", !match);
+            if (match) visibleCount++;
+          });
+
+          emptyState.classList.toggle("hidden", visibleCount !== 0);
+        });
+      });
+    </script>
+  </body>
+</html>
