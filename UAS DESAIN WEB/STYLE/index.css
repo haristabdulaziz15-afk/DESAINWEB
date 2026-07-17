@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #2f2f2f;
+  background: #f7f3ee;
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.wadah {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+.tombol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 16px 32px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.tombol--utama {
+  background: #482718;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(72, 39, 24, 0.12);
+}
+.tombol--kedua {
+  background: rgba(0, 0, 0, 0);
+  color: #482718;
+  border-color: rgba(72, 39, 24, 0.35);
+}
+.tombol--kecil {
+  padding: 8px 24px;
+  font-size: 0.85rem;
+}
+
+.beranda {
+  position: relative;
+  overflow: hidden;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+}
+.beranda__media {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 78% 30%,
+      rgba(64, 182, 212, 0.55),
+      transparent 55%
+    ),
+    linear-gradient(160deg, #1c3326, #2c4a34 35%, #3c5c3f 60%, #482718);
+}
+.beranda__lapisan {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(72, 39, 24, 0.55),
+    rgba(72, 39, 24, 0.15) 40%,
+    rgba(72, 39, 24, 0.55)
+  );
+}
+.beranda__konten {
+  position: relative;
+  z-index: 2;
+  max-width: 620px;
+  padding-block: 40px 40px;
+  color: #fff;
+}
+.beranda__gelombang {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 90px;
+  z-index: 1;
+}
+.label-kecil {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgb(222.1871794872, 242.458974359, 247.6128205128);
+  margin-bottom: 16px;
+}
+.judul-utama {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.12;
+  margin-bottom: 24px;
+}
+.subjudul {
+  font-size: 1.02rem;
+  color: hsla(0, 0%, 100%, 0.88);
+  max-width: 460px;
+  margin-bottom: 32px;
+}
+.beranda__aksi {
+  display: flex;
+  gap: 16px;
+}
+.beranda__aksi .tombol--kedua {
+  color: #fff;
+  border-color: hsla(0, 0%, 100%, 0.55);
+  background: hsla(0, 0%, 100%, 0.06);
+}
+.fitur {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-block: 40px;
+}
+.fitur__item {
+  text-align: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 16px;
+  box-shadow: 0 4px 14px rgba(72, 39, 24, 0.1);
+}
+.fitur__ikon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: rgb(222.1871794872, 242.458974359, 247.6128205128);
+  color: #482718;
+  margin-bottom: 16px;
+}
+.fitur__ikon svg {
+  width: 24px;
+  height: 24px;
+}
+.fitur__item h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #482718;
+  margin-bottom: 4px;
+}
+.fitur__item p {
+  font-size: 0.85rem;
+  color: rgba(47, 47, 47, 0.7);
+}
+.kaki {
+  position: relative;
+  padding-top: 90px;
+  text-align: center;
+  background: #482718;
+  color: hsla(0, 0%, 100%, 0.85);
+}
+.kaki__teks {
+  font-size: 0.85rem;
+  padding-block: 24px 32px;
+}

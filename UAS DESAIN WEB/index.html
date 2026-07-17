@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="STYLE/index.css" />
+    <link rel="stylesheet" href="STYLE/navbar.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar__dalam">
+        <a href="index.html" class="navbar__logo">
+          <img
+            src="STYLE/assets/logo.png"
+            alt="Logo Pojok Kali"
+            class="navbar__logo-img"
+          />
+        </a>
+
+        <div class="navbar__tautan" id="navMenu">
+          <a href="index.html" class="active">Beranda</a>
+          <a href="menu.html">Menu</a>
+          <a href="tentang-kami.html">Tentang Kami</a>
+          <a href="galeri.html">Galeri</a>
+          <a href="kontak.html">Kontak</a>
+        </div>
+
+        <div class="navbar__aksi">
+          <a href="menu.html" class="btn-primary">Pesan Sekarang</a>
+          <button class="navbar__burger" id="burgerBtn" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="beranda" id="beranda">
+      <div class="beranda__media"></div>
+      <div class="beranda__lapisan"></div>
+      <div class="wadah beranda__konten">
+        <p class="label-kecil">Selamat Datang di Pojok Kali</p>
+        <h1 class="judul-utama">Secangkir Kopi<br />Sepotong Ketentraman</h1>
+        <p class="subjudul">
+          Nikmati kopi berkualitas di tempat yang tenang, dengan suasana alami
+          di tepi kali.
+        </p>
+        <div class="beranda__aksi">
+          <a href="menu.html" class="tombol tombol--utama">Pesan Sekarang</a>
+          <a href="menu.html" class="tombol tombol--kedua">Lihat Menu</a>
+        </div>
+      </div>
+      <svg
+        class="beranda__gelombang"
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,64 C240,110 480,10 720,40 C960,70 1200,110 1440,60 L1440,120 L0,120 Z"
+          fill="#F7F3EE"
+        />
+      </svg>
+    </section>
+
+    <section class="fitur wadah">
+      <div class="fitur__item">
+        <span class="fitur__ikon">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M4 9h13a3 3 0 0 1 0 6h-.5M4 9v6a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4v-1M4 9V6a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <h3>Kopi Berkualitas</h3>
+        <p>Biji kopi pilihan terbaik</p>
+      </div>
+      <div class="fitur__item">
+        <span class="fitur__ikon">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M3 11l9-7 9 7M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <h3>Tempat Nyaman</h3>
+        <p>Suasana tenang dan cozy</p>
+      </div>
+      <div class="fitur__item">
+        <span class="fitur__ikon">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a6 6 0 0 1 7 0M12 19h.01"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <h3>Free WiFi</h3>
+        <p>Internet cepat</p>
+      </div>
+      <div class="fitur__item">
+        <span class="fitur__ikon">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M6 7h12l1 13H5L6 7ZM9 7a3 3 0 0 1 6 0"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <h3>Harga Terjangkau</h3>
+        <p>Bersahabat di kantong</p>
+      </div>
+    </section>
+
+    <footer class="kaki">
+      <p class="kaki__teks">&copy; 2026 Harist Abdul Aziz.</p>
+    </footer>
+  </body>
+</html>

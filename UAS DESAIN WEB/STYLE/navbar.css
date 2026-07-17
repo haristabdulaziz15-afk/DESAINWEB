@@ -1,0 +1,309 @@
+/* =========================================================
+   NAVBAR TERPADU — Style & Warna Seragam untuk Semua Halaman
+   ========================================================= */
+
+:root {
+  --coffee: #482718;
+  --coffee-soft: #5c3624;
+  --coffee-dark: #331b10;
+  --river: #40b6d4;
+  --river-deep: #2e93ac;
+  --river-light: #8fd9ea;
+  --cream: #f7f3ee;
+  --dark: #2f2f2f;
+  --white: #ffffff;
+  --line: rgba(72, 39, 24, 0.08);
+
+  --font-head: "Cormorant Garamond", serif;
+  --font-body: "Poppins", sans-serif;
+
+  --radius: 16px;
+  --shadow-soft: 0 10px 30px rgba(72, 39, 24, 0.08);
+  --shadow-lift: 0 20px 40px rgba(72, 39, 24, 0.18);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ---------- NAVBAR UTAMA ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247, 243, 238, 0.92);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--line);
+  transition:
+    padding 0.35s var(--ease),
+    box-shadow 0.35s var(--ease);
+  padding: 16px 0;
+}
+
+.navbar.is-scrolled {
+  padding: 10px 0;
+  box-shadow: 0 6px 20px rgba(72, 39, 24, 0.08);
+}
+
+.navbar__dalam {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ---------- LOGO ---------- */
+.navbar__logo {
+  height: 250px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+img.navbar__logo-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo__text {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--coffee);
+}
+
+/* ---------- TAUTAN NAVIGASI ---------- */
+.navbar__tautan {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-inline: auto;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.navbar__tautan a {
+  position: relative;
+  color: var(--dark);
+  padding: 4px 2px;
+  transition: color 0.3s var(--ease);
+}
+
+.navbar__tautan a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0%;
+  background: var(--river);
+  transition: width 0.35s var(--ease);
+  border-radius: 2px;
+}
+
+.navbar__tautan a:hover {
+  color: var(--river-deep);
+}
+
+.navbar__tautan a:hover::after {
+  width: 100%;
+}
+
+.navbar__tautan a.active {
+  color: var(--coffee);
+  font-weight: 600;
+}
+
+.navbar__tautan a.active::after {
+  width: 100%;
+  background: var(--coffee);
+}
+
+/* ---------- TOMBOL NAVIGASI ---------- */
+.navbar__aksi {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--coffee);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition:
+    background 0.3s var(--ease),
+    transform 0.35s var(--ease-bounce),
+    box-shadow 0.3s var(--ease);
+  box-shadow: var(--shadow-soft);
+  white-space: nowrap;
+}
+
+.btn-primary:hover {
+  background: var(--coffee-soft);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--coffee);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1.5px solid var(--coffee);
+  cursor: pointer;
+  transition:
+    background 0.3s var(--ease),
+    color 0.3s var(--ease),
+    transform 0.35s var(--ease-bounce);
+  white-space: nowrap;
+}
+
+.btn-outline:hover {
+  background: var(--coffee);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ---------- BURGER MENU (Mobile) ---------- */
+.navbar__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.navbar__burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--coffee);
+  border-radius: 2px;
+  transition:
+    transform 0.35s var(--ease),
+    opacity 0.25s var(--ease);
+}
+
+.navbar__burger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar__burger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__burger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .navbar__tautan {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar__burger {
+    display: flex;
+  }
+
+  .navbar__tautan {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(78vw, 320px);
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    padding: 100px 32px 32px;
+    transform: translateX(100%);
+    transition: transform 0.45s var(--ease);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.12);
+    z-index: 99;
+    margin: 0;
+  }
+
+  .navbar__tautan.is-open {
+    transform: translateX(0);
+  }
+
+  .navbar__tautan a {
+    font-size: 1.05rem;
+    color: var(--dark);
+  }
+
+  .navbar__aksi .btn-primary,
+  .navbar__aksi .btn-outline {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__dalam {
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .navbar__logo {
+    height: 44px;
+  }
+
+  .logo__text {
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar__tautan a::after,
+  .btn-primary,
+  .btn-outline,
+  .navbar__burger span {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .navbar.is-scrolled {
+    padding: 16px 0;
+  }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+.navbar__tautan a:focus-visible,
+.btn-primary:focus-visible,
+.btn-outline:focus-visible,
+.navbar__burger:focus-visible {
+  outline: 2px solid var(--river);
+  outline-offset: 2px;
+}
