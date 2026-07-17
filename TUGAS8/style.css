@@ -1,0 +1,274 @@
+:root {
+  --coffee: #482718;
+  --coffee-soft: #5c3624;
+  --river: #40b8d4;
+  --river-deep: #2f97af;
+  --cream: #f7f3ee;
+  --dark: #2f2f2f;
+  --white: #ffffff;
+
+  --font-head: "Cormorant Garamond", serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 1440px;
+  background: var(--cream);
+  color: var(--dark);
+  font-family: var(--font-body);
+  overflow-x: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+.navbar {
+  width: 1440px;
+  height: 88px;
+  background: rgba(247, 243, 238, 0.92);
+  border-bottom: 1px solid rgba(72, 39, 24, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.nav-container {
+  width: 1360px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-icon {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dark);
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--river-deep);
+}
+
+.btn-primary {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--coffee);
+  border: none;
+  padding: 13px 26px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--coffee-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(72, 39, 24, 0.25);
+}
+
+.about-hero {
+  width: 1360px;
+  margin: 0 auto;
+  padding: 90px 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.about-text {
+  width: 560px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--coffee);
+  margin-bottom: 16px;
+}
+
+.about-text h1 {
+  font-family: var(--font-head);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--coffee);
+  margin-bottom: 28px;
+  animation: fadeInUp 0.7s ease 0.1s both;
+}
+
+.about-visual {
+  width: 420px;
+  height: 480px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(72, 39, 24, 0.18);
+  animation: fadeInScale 0.8s ease 0.15s both;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.about-visual:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 40px 70px rgba(72, 39, 24, 0.26);
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.7s ease;
+}
+
+.about-visual:hover .scene {
+  transform: scale(1.08);
+  filter: saturate(1.08) brightness(1.02);
+}
+
+.steam-caption {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(72, 39, 24, 0.72);
+  backdrop-filter: blur(4px);
+  color: var(--cream);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  border-radius: 30px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.about-visual:hover .steam-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vmv-section {
+  width: 1360px;
+  margin: 0 auto;
+  padding: 20px 0 110px;
+  display: flex;
+  gap: 32px;
+}
+
+.vmv-card {
+  width: 432px;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 38px 34px;
+  border: 1px solid rgba(72, 39, 24, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+  animation: fadeInUp 0.7s ease both;
+}
+.vmv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 45px rgba(72, 39, 24, 0.14);
+  border-color: transparent;
+}
+
+.vmv-index {
+  font-family: var(--font-head);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--river);
+  letter-spacing: 1px;
+}
+
+.vmv-card h3 {
+  font-family: var(--font-head);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--coffee);
+  margin: 8px 0 16px;
+}
+
+.vmv-card p {
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: #5a5a5a;
+}
+
+.vmv-card ul li {
+  font-size: 14.5px;
+  line-height: 1.9;
+  color: #5a5a5a;
+  padding-left: 18px;
+  position: relative;
+}
+
+footer {
+  width: 1440px;
+  background: var(--coffee);
+  position: relative;
+  padding-top: 40px;
+}
+
+footer p {
+  text-align: center;
+  color: var(--cream);
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  padding-bottom: 26px;
+  opacity: 0.85;
+}
