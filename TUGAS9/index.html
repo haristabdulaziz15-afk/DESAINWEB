@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu — Pojok Kali</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner">
+        <a href="#" class="brand">
+          <img src="assets/logo.png" alt="Pojok Kali" class="brand-mark" />
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+          <a href="#">Beranda</a>
+          <a href="#">Tentang Kami</a>
+          <a href="#" class="active">Menu</a>
+          <a href="#">Galeri</a>
+          <a href="#">Kontak</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="btn btn-primary">Pesan Sekarang</button>
+          <button class="burger" id="burgerBtn" aria-label="Buka menu navigasi">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="menu-hero">
+      <div class="menu-hero-inner">
+        <span class="eyebrow">Daftar Rasa</span>
+        <h1>Menu Kami</h1>
+        <p>
+          Setiap sajian dituang perlahan, seperti kali yang mengalir tenang di
+          pojok kota.
+        </p>
+      </div>
+      <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none">
+        <path
+          d="M0,40 C 200,90 400,0 720,40 C 1040,80 1240,10 1440,45 L1440,90 L0,90 Z"
+        ></path>
+      </svg>
+    </section>
+    <section class="menu-filter-wrap">
+      <div
+        class="menu-filter"
+        id="menuFilter"
+        role="tablist"
+        aria-label="Filter kategori menu"
+      >
+        <button class="filter-btn is-active" data-filter="semua">Semua</button>
+        <button class="filter-btn" data-filter="kopi">Kopi</button>
+        <button class="filter-btn" data-filter="non-kopi">Non Kopi</button>
+        <button class="filter-btn" data-filter="makanan">Makanan</button>
+        <button class="filter-btn" data-filter="cemilan">Cemilan</button>
+        <span class="filter-indicator" id="filterIndicator"></span>
+      </div>
+    </section>
+    <main class="menu-main">
+      <div class="menu-grid" id="menuGrid">
+        <article class="menu-card" data-category="kopi" style="--d: 0">
+          <div class="menu-card-media">
+            <img
+              src="assets/kopi-susu-kali.jpg"
+              alt="Kopi Susu Kali"
+              loading="lazy"
+            />
+            <span class="menu-tag">Best Seller</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Kopi Susu Kali</h3>
+            <p>Espresso, susu segar, gula aren</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">Rp 16.000</span>
+              <button
+                class="add-btn"
+                aria-label="Tambah Kopi Susu Kali ke pesanan"
+              >
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="kopi" style="--d: 1">
+          <div class="menu-card-media">
+            <img src="assets/americano.jpg" alt="Americano" loading="lazy" />
+          </div>
+          <div class="menu-card-body">
+            <h3>Americano</h3>
+            <p>Espresso murni, air, es batu</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">Rp 14.000</span>
+              <button class="add-btn" aria-label="Tambah Americano ke pesanan">
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="kopi" style="--d: 2">
+          <div class="menu-card-media">
+            <img src="assets/cappuccino.jpg" alt="Cappuccino" loading="lazy" />
+          </div>
+          <div class="menu-card-body">
+            <h3>Cappuccino</h3>
+            <p>Espresso, susu, foam lembut</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">Rp 18.000</span>
+              <button class="add-btn" aria-label="Tambah Cappuccino ke pesanan">
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="kopi" style="--d: 3">
+          <div class="menu-card-media">
+            <img
+              src="assets/manual-brew.jpg"
+              alt="Manual Brew"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <h3>Manual Brew</h3>
+            <p>Racikan V60, biji pilihan hari ini</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">Rp 20.000</span>
+              <button
+                class="add-btn"
+                aria-label="Tambah Manual Brew ke pesanan"
+              >
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="non-kopi" style="--d: 0">
+          <div class="menu-card-media">
+            <img
+              src="assets/matcha-latte.jpg"
+              alt="Matcha Latte"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <h3>Matcha Latte</h3>
+            <p>Matcha grade A, susu segar</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">Rp 18.000</span>
+              <button
+                class="add-btn"
+                aria-label="Tambah Matcha Latte ke pesanan"
+              >
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="non-kopi" style="--d: 1">
+          <div class="menu-card-media">
+            <img
+              src="assets/cokelat-hangat.jpg"
+              alt="Cokelat Hangat"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <h3>Cokelat Hangat</h3>
+            <p>Cokelat premium, taburan kayu manis</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">Rp 16.000</span>
+              <button
+                class="add-btn"
+                aria-label="Tambah Cokelat Hangat ke pesanan"
+              >
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="makanan" style="--d: 2">
+          <div class="menu-card-media">
+            <img src="assets/roti-bakar.jpg" alt="Roti Bakar" loading="lazy" />
+          </div>
+          <div class="menu-card-body">
+            <h3>Roti Bakar</h3>
+            <p>Keju, cokelat meses, susu kental manis</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">Rp 16.000</span>
+              <button class="add-btn" aria-label="Tambah Roti Bakar ke pesanan">
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="cemilan" style="--d: 3">
+          <div class="menu-card-media">
+            <img
+              src="assets/kentang-goreng.jpg"
+              alt="Kentang Goreng"
+              loading="lazy"
+            />
+          </div>
+          <div class="menu-card-body">
+            <h3>Kentang Goreng</h3>
+            <p>Renyah, saus sambal & mayones</p>
+            <div class="menu-card-footer">
+              <span class="menu-price">Rp 16.000</span>
+              <button
+                class="add-btn"
+                aria-label="Tambah Kentang Goreng ke pesanan"
+              >
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="empty-state" id="emptyState">Belum ada menu di kategori ini.</p>
+    </main>
+    <footer class="site-footer">
+      <span>&copy; 2026 Harist Abdul Aziz</span>
+    </footer>
+
+    <div class="toast" id="toast">Ditambahkan ke pesanan ✓</div>
+
+    <script>
+      const header = document.getElementById("siteHeader");
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("is-scrolled", window.scrollY > 30);
+      });
+      const burger = document.getElementById("burgerBtn");
+      const nav = document.getElementById("mainNav");
+      burger.addEventListener("click", () => {
+        burger.classList.toggle("is-open");
+        nav.classList.toggle("is-open");
+      });
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          burger.classList.remove("is-open");
+          nav.classList.remove("is-open");
+        });
+      });
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const cards = document.querySelectorAll(".menu-card");
+      const indicator = document.getElementById("filterIndicator");
+      const emptyState = document.getElementById("emptyState");
+
+      function moveIndicator(btn) {
+        indicator.style.width = btn.offsetWidth + "px";
+        indicator.style.left = btn.offsetLeft + "px";
+      }
+      moveIndicator(document.querySelector(".filter-btn.is-active"));
+      window.addEventListener("resize", () =>
+        moveIndicator(document.querySelector(".filter-btn.is-active")),
+      );
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+          moveIndicator(btn);
+
+          const filter = btn.dataset.filter;
+          let visibleCount = 0;
+
+          cards.forEach((card, i) => {
+            const match =
+              filter === "semua" || card.dataset.category === filter;
+            if (match) {
+              visibleCount++;
+              card.classList.remove("is-hidden");
+              card.style.transitionDelay = (i % 8) * 40 + "ms";
+              requestAnimationFrame(() => card.classList.remove("is-out"));
+            } else {
+              card.classList.add("is-out");
+              card.style.transitionDelay = "0ms";
+              setTimeout(() => card.classList.add("is-hidden"), 260);
+            }
+          });
+
+          setTimeout(() => {
+            emptyState.classList.toggle("is-visible", visibleCount === 0);
+          }, 280);
+        });
+      });
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+      cards.forEach((card) => revealObserver.observe(card));
+      const toast = document.getElementById("toast");
+      let toastTimer;
+      document.querySelectorAll(".add-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.classList.remove("pulse");
+          void btn.offsetWidth;
+          btn.classList.add("pulse");
+
+          toast.classList.remove("is-visible");
+          void toast.offsetWidth;
+          toast.classList.add("is-visible");
+          clearTimeout(toastTimer);
+          toastTimer = setTimeout(
+            () => toast.classList.remove("is-visible"),
+            1800,
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
